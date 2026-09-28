@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+interface ItemNavbar {
+  titulo: string;
+  url: string;
+  icone: string;
+}
+
 @Component({
   imports: [],
   selector: 'app-root',
@@ -8,5 +14,21 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
 })
 export class App {
-
+  public readonly itens: ItemNavbar[] = [
+    {
+      titulo: 'Sobre', 
+      url: '#sobre', 
+      icone: 'bi-person'
+    },
+    {
+      titulo: 'Habilidades', 
+      url: '#habilidades', 
+      icone: 'bi-award'
+    },
+    {
+      titulo: 'Portfólio', 
+      url: '#portfolio', 
+      icone: 'bi-card-list'
+    }
+  ];
 }
