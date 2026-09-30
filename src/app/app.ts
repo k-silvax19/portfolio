@@ -1,34 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Navbar } from './components/navbar/navbar';
+import { Sobre } from './components/sobre/sobre';
 
-interface ItemNavbar {
-  titulo: string;
-  url: string;
-  icone: string;
-}
+
 
 @Component({
-  imports: [],
+  imports: [Navbar, Sobre],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',
 })
-export class App {
-  public readonly itens: ItemNavbar[] = [
-    {
-      titulo: 'Sobre', 
-      url: '#sobre', 
-      icone: 'bi-person'
-    },
-    {
-      titulo: 'Habilidades', 
-      url: '#habilidades', 
-      icone: 'bi-award'
-    },
-    {
-      titulo: 'Portfólio', 
-      url: '#portfolio', 
-      icone: 'bi-card-list'
-    }
-  ];
-}
+export class App { }

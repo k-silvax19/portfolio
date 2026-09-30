@@ -1,2 +1,29 @@
-@use 'bootstrap';
-@use 'bootstrap-icons'
+$cor-primaria: #1f1f1f;
+$cor-segundaria: #4e4e4e;
+$fonte-padrao: Georgia, 'Times New Roman', serif;
+
+@use 'bootstrap/scss/bootstrap' with (
+    $primary: $cor-primaria,
+    $secondary: $cor-segundaria,
+    $font-family-sans-serif: $fonte-padrao
+);
+
+@use 'bootstrap-icons';
+
+section{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sobre-banner-text {
+    background-color: rgb(255, 255, 255);
+    background-clip: text;
+    color: transparent;
+}
+
+.sobre-banner-img {
+    background-color: #3a3a3a;
+    border-radius: 33% 67% 43% 47% / 66% 41% 68% 34%;
+    height: 32rem,;
+    width: 32rem;
+}
